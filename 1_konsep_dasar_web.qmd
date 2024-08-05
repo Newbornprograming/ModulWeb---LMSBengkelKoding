@@ -1,0 +1,379 @@
+---
+# title: "Konsep Dasar Web Programming"
+format: html
+categories: [teori]
+toc-title: "On this page"
+---
+
+# 1. Konsep Dasar Web Programmming {.unnumbered}
+
+## Apa itu Pemrograman Web?
+
+Pemrograman web adalah proses menciptakan dan mengembangkan aplikasi web menggunakan bahasa pemrograman, teknologi, dan standar web.
+
+Aplikasi web dapat diakses melalui browser web dan memungkinkan pengguna untuk berinteraksi dengan konten dan layanan yang disediakan.
+
+<br>
+
+## Lingkungan Pengembangan Web
+
+### Editor kode
+
+![Visual Studio Code](assets/tools/vscode/vscode.png){width="80%" style="text-align:center;"}
+
+Gunakan editor teks atau lingkungan pengembangan terintegrasi (IDE) seperti Visual Studio Code, Sublime Text, atau Atom untuk menulis kode web.
+<br>
+
+### Browser
+****
+Berbagai browser seperti Chrome, Firefox, atau Safari digunakan untuk menguji dan melihat hasil dari halaman web yang dikembangkan.
+<br>
+
+### Server lokal
+
+Anda dapat menginstal server web lokal seperti Apache, Nginx, atau XAMPP untuk menguji halaman web secara lokal sebelum diunggah ke server publik.
+
+
+### URL (Uniform Resource Locator)
+
+Alamat yang digunakan untuk mengakses halaman web. URL terdiri dari protokol (misalnya http:// atau https://), nama domain, dan path halaman.
+
+<hr>
+
+### HTTP (Hypertext Transfer Protocol)
+
+Protokol komunikasi yang digunakan untuk mentransfer data antara klien dan server. Permintaan klien dan respons server terjadi melalui metode HTTP seperti GET, POST, PUT, dan DELETE.
+
+<hr>
+
+### Markup Languages
+
+Markup languages adalah bahasa yang digunakan untuk membuat struktur dan tampilan konten dalam halaman web. 
+
+{{< video https://www.youtube.com/embed/hMDJyb7VkYw >}}
+
+HTML (HyperText Markup Language) adalah markup language yang paling umum digunakan untuk membangun struktur halaman web. XML (eXtensible Markup Language) digunakan untuk menyimpan dan mengirim data secara terstruktur. 
+
+**Struktur Dasar HTML**
+
+Merupakan bahasa markup paling popular, disusul eXtensible Markup Language (XML). XML adalah bahasa yang digunakan untuk membuat bahasa markup lain yaitu Wireless Markup Language (WML).Bahasa markup bukan bahasa pemrograman. Oleh karena itu, penyebutan bahasa pemrograman HTML adalah kurang tepat.
+
+**Format Dasar HTML**
+
+```php
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1">
+</head>
+<body>
+{ Tempat untuk coding }
+</body>
+</html>
+```
+
+**< HTML >**
+
+Dokumen HTML harus diawali dengan tag < html > dan diakhiri dengan < /html >memberi tahu kepada browser bahwa yang berada dalam kedua tag tersebut adalah dokumen HTML.
+
+**< HEAD >**
+Bagian header dalam dokumen HTML. Biasanya berisi judul halaman web. Bentuk secara umum:
+
+```php
+<head>
+<title>Judul ini akan ditampilkan pada bagian atas
+browser
+</title>
+</head>
+```
+
+**< BODY >**
+
+Bagian isi dari dokumen HTML yang dapat disisipkan teks, gambar, video maupun link. Sesuatu yang ditulis di dalam bodyakan ditampilkan pada halaman web. 
+
+**HTML Tags**
+
+Instruksi/perintah dalam HTML disebut tag. Tag pada HTML tidak bersifat case sensitive.
+
+```html
+<element atribut=value>
+```
+
+Keterangan:
+
+- element = nama tag
+- atribut = atribut
+- value = nilai dari atribut
+Contoh:
+
+```html
+<font color=red>
+```
+
+- FONT merupakan element,
+- COLOR merupakan atribut,
+- RED adalah value
+
+::: {.callout title="Contoh HTML"}
+
+```php
+<html>
+<head>
+<title>
+Halaman Latihan 1
+</title>
+</head>
+<body>
+<h1>
+Ini adalah latihan pemrograman web pertamaku.
+</h1>
+</body>
+</html>
+```
+:::
+
+
+CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan gaya elemen-elemen dalam halaman web.
+
+<hr>
+
+### Arsitektur Klien dan Server
+
+![Arsitektur Klien dan Server](assets/dasar/server-client.png){width="70%" style="text-align:center;"}
+
+
+Pada pemrograman web, arsitektur klien dan server digunakan. Klien (misalnya browser web) mengirimkan permintaan ke server, dan server merespons dengan mengirimkan halaman web yang diminta.
+
+Klien menginterpretasikan halaman web menggunakan HTML, CSS, dan JavaScript, sementara server mengurus pemrosesan data dan logika di balik halaman.
+
+<hr>
+
+### Database
+
+![Database MySQL](assets/dasar/db-mysql.png){width="70%" style="text-align:center;"}
+
+DBMS atau Database Management System digunakan untuk menyimpan dan mengelola data dalam aplikasi web. Beberapa sistem database yang umum digunakan termasuk MySQL, PostgreSQL, MongoDB, dan Oracle. Pemahaman tentang database meliputi pembuatan tabel dan relasi antar tabel, manipulasi data dengan menggunakan bahasa query seperti SQL, dan pengoptimalan kinerja database
+
+<hr>
+
+### Framework
+
+:::{layout-ncol=2 layout-valign="bottom" style="text-align:center;"}
+![Laravel](assets/dasar/laravel.jpg){.p-3 .m-auto}
+
+![Bootstrap](assets/dasar/Bootstrap.png){.p-3}
+:::
+
+Framework adalah kerangka kerja perangkat lunak yang menyediakan struktur, komponen, dan alat bantu untuk membangun aplikasi web dengan lebih cepat dan efisien. Framework menyediakan aturan dan konvensi yang konsisten, menyederhanakan tugas umum, jika seperti routing, validasi data, interaksi dengan database, dan lainnya. Dalam pemrograman web khsusnya dengan menggunakan bahasa pemrograman php yang populer termasuk Laravel dan CodeIgniter. Dalam pemrograman web, 
+
+<hr>
+
+### Web Servers
+
+![Apache Server](assets/dasar/Apache-server.png){width="70%" style="text-align:center;"}
+
+Web server adalah perangkat lunak yang mengelola permintaan dari browser dan mengirimkan halaman web ke pengguna melalui protokol HTTP. Beberapa server web yang umum digunakan adalah Apache, Nginx, dan IIS (Internet Information Services). Pemahaman tentang konfigurasi server web, manajemen domain, dan penanganan permintaan HTTP penting dalam pengembangan web.
+
+<hr>
+
+### Version Control
+
+Version control adalah metode untuk melacak perubahan kode sumber selama pengembangan aplikasi. Git adalah sistem version control yang populer yang memungkinkan pengembang untuk bekerja secara kolaboratif, membuat cabang (branch), menggabungkan perubahan (merge), dan melakukan pemulihan (revert) jika terjadi kesalahan. Version control membantu dalam manajemen kode, pengendalian versi, dan kolaborasi tim.
+
+<hr>
+
+### Resposive Web Design
+
+Responsive web design adalah pendekatan desain web yang memastikan tampilan dan pengalaman pengguna yang optimal di berbagai perangkat dan ukuran layar. Ini melibatkan penggunaan teknik seperti media queries, flexible grids, dan CSS frameworks (seperti Bootstrap atau Foundation) untuk mengatur tata letak dan tampilan halaman web secara responsif.
+
+<hr>
+
+### Testing and Debugging
+
+Testing dan debugging adalah proses penting dalam pengembangan web untuk memastikan aplikasi berfungsi dengan baik dan bebas dari kesalahan. 
+Testing adalah proses verifikasi dan validasi untuk memastikan bahwa aplikasi web berfungsi sesuai dengan yang diharapkan dan memenuhi persyaratan bisnis yang telah ditetapkan. Tujuan dari testing adalah untuk menemukan bug atau kesalahan dalam aplikasi sebelum dirilis ke pengguna akhir.
+Debugging adalah proses untuk menemukan, mendiagnosis, dan memperbaiki bug atau kesalahan dalam kode aplikasi web. 
+
+<hr>
+
+### API (Application Programming Interface)
+
+API adalah antarmuka yang memungkinkan aplikasi web berkomunikasi dan berbagi data dengan aplikasi atau layanan lain. RESTful API adalah pendekatan populer untuk mengembangkan API yang menggunakan protokol HTTP dan standar seperti JSON atau XML untuk bertukar data.
+
+<hr>
+<br>
+
+## PHP (Hypertext Preprocessor)
+
+
+PHP adalah bahasa pemrograman server-side yang populer untuk pengembangan web. PHP digunakan untuk memproses permintaan dari klien, mengakses basis data, dan menghasilkan respons yang dikirimkan kembali ke klien.
+
+### Memulai PHP
+
+Setiap memulai kode php selalu diawali dengan `<?php` dan ditutup dengan `?>` <br>
+
+```php
+<?php
+    $kata = "Hello World!"
+    echo "$kata"; // Output: Hello World!
+?>
+```
+
+Menggunakan echo untuk print
+
+Dalam variabel php menggunakan tanda $ ($variable) untuk inisialisasi variabel 
+
+### PHP - Kondisional
+
+Kondisional dalam bahasa pemrograman adalah proses yang berfungsi untuk menentukan blok instruksi akan dieksekusi atau tidak, tergantung pada kondisinya sendiri seperti nilainya sudah benar (True) atau belum (False). Ada beberapa jenis percabangan yaitu if-else, switch case dll.
+
+```php
+$angka = -5;
+if($angka < 0){
+    echo 'Angka negatif';
+} else {
+    echo'Angka positif ';
+};
+//Output : Angka Negatif
+```
+
+```php
+$input = 3;
+switch($input){
+    case "1":
+    echo"Inputan adalah satu";
+    break;
+    case "2":
+    echo"Inputan adalah dua";
+    break;
+    case "3":
+    echo"Inputan adalah tiga";
+    break;
+    default:
+    echo"Tidak ada input yang cocok dengan pilihan anda.";
+    }
+    /* Output: Inputan adalah tiga
+    Jika nilai dari variable `$input` bukan sama dengan `case`,
+    maka akan menampilkan pesan “Tidak ada input yang cocok
+    */
+
+```
+<br>
+
+### PHP – isset dan empty
+
+Fungsi **isset** digunakan untuk memeriksa apakah suatu variabel telah diatur atau tidak.
+Sintaks fungsi ini sebagai berikut:
+
+```php
+$nama = "Bengkel Koding";
+if(isset($nama)){
+    print("Nama telah diatur");
+} else {
+    print("Nama belum diatur")
+}
+// output : Nama telah diatur
+
+```
+<br>
+
+Fungsi **empty** digunakan untuk memeriksa apakah suatu variabel kosong atau tidak.
+Sintaks fungsi ini sebagai berikut:
+
+```php
+$nama = "";
+if(empty($nama)) {
+    print("nama kosong");
+} else {
+    print("nama tidak kosong");
+}
+// output : Nama kosong
+
+```
+<br>
+
+### PHP - Looping
+
+Perulangan pada php terdapat beberapa fungsi yang dapat digunakan, diantaranya adalah for, while, do while, dan foreach
+
+#### Looping For
+Looping For adalah salah satu looping statement pada bahasa pemrograman php, yang memiliki sintaks seperti for (expression1; expression2; expression3) {} dimana expression 1 merupakan awal dari pengulangan, expression 2 menentukan kondisi yang harus terpenuhi agar perintah d iterasi lebih lanjut, sedangkan expresion 3 mengubah nilai variable dalam setiap iterasinya.
+
+Contoh Penggunaannya:
+
+```php
+for ($i=0;$i<=5;$i++){
+echo "$i ";
+}
+// Output: 0 1 2 3 4 5
+
+```
+
+Dalam contoh diatas, nilai x mulai dari angka 0 dan terus ditambah sampai batas yaitu <=5. Setelah itu akan di eksekusi dengan cara mencetak isi value dari x ke layar.
+
+#### While
+Looping while juga ada didalam bahasa pemograman PHP, sintaksnya sama tapi bedanya hanya bisa melakukan looping selama kondisinya benar/true. 
+
+Contohnya:
+
+```php
+$x = 0; //awal variabel $x
+while($x <= 5){
+echo "$x ";
+$x++;
+}
+// Output : 0 1 2 3 4 5
+```
+
+#### Do While
+Perulangan do-while
+adalah perintah yang digunakan untuk mengulang suatu proses terhadap nilai kondisional (expression) saat awal loop dilanjutkan dengan evaluasi ulang pada akhir setiap iterasi.
+
+Sintaks nya adalah sebagai berikut:
+
+```php
+$i = 1;
+do{
+    echo $i;
+    $i++;
+} while ($i <= 5);
+// Output : 0 1 2 3 4 5
+
+```
+
+#### Foreach
+Foreach merupakan perintah yang digunakan untuk mengiterasi set data array dalam bahasa pemrograman php. Sintaks nya seperti ini:
+
+```php
+$buah = array("Apel", "Jeruk", "Mangga", "Pisang");
+foreach ($buah as $item) :
+    echo $item . "\n";
+endforeach;
+/* output : 
+apel
+jeruk
+mangga
+pisang
+*/
+```
+
+Selain menggnakan endforeach bisa juga menggunakan kurung kurawal {}
+
+```php
+$buah = array("Apel", "Jeruk", "Mangga", "Pisang");
+foreach ($buah as $item) {
+    echo $item . "\n";
+}
+/* output : 
+apel
+jeruk
+mangga
+pisang
+*/
+```
+
+### Include - Require
+
+
+Fungsi-fungsi ini digunakan untuk menyisipkan (include) atau memasukkan (require) file PHP eksternal ke dalam file PHP yang sedang aktif. Berguna untuk mengorganisir kode secara modular.

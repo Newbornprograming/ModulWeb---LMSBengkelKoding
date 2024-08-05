@@ -1,0 +1,226 @@
+---
+# title: "Front Page To Do List"
+format: html
+categories: [ui, praktik, bootstrap]
+toc-title: "On this page"
+---
+
+# 4. Front Page {.unnumbered}
+
+Setelah mempelajari responsive web dan framework bootstrap, selanjutnya adalah mengaplikasikan bootstrap ke php yang akan dibuat. Berikut adalah contoh tampilan front page sederhana untuk mengaplikasikan bootstrap pada website.
+
+![Front Page](assets/frontpage/frontpage.png){width="70%" style="text-align:center;"}
+
+<br>
+Pembuatan frontpage merupakan langkah awal dalam mengembangkan sebuah situs web. Frontpage, atau halaman depan, adalah halaman pertama yang dilihat oleh pengunjung saat mengakses situs web Anda. Tujuan dari frontpage adalah memberikan informasi yang jelas, menarik, dan menggambarkan dengan baik apa yang situs web Anda tawarkan.
+<br>
+
+Berikut adalah beberapa langkah untuk membuat frontpage sederhana:
+<br>
+
+1. Perencanaan: Pertama, tentukan tujuan dan sasaran situs web Anda.
+
+2. Desain tata letak: Pilih tata letak yang sederhana dan mudah dibaca. Gunakan grid atau susunan blok untuk menempatkan elemen-elemen seperti judul, navigasi, konten utama, dan footer. Pastikan tata letak yang Anda pilih responsif sehingga situs web Anda terlihat baik di berbagai perangkat.
+
+3. Header: Header adalah bagian atas halaman yang biasanya berisi judul situs web, logo, dan menu navigasi. 
+
+4. Konten utama: Bagian ini berisi informasi penting yang ingin Anda sampaikan kepada pengunjung.
+
+5. Sidebar atau widget: Jika diperlukan, tambahkan sidebar atau widget di sisi halaman untuk menampilkan informasi tambahan seperti daftar kategori, arsip artikel, atau tautan sosial media. Pastikan elemen-elemen ini tidak mengalihkan perhatian dari konten utama.
+
+6. Footer: Footer adalah bagian bawah halaman yang sering berisi tautan tambahan, informasi kontak, atau hak cipta. Pastikan untuk mencantumkan informasi kontak yang relevan dan tautan ke halaman lain di situs web Anda.
+
+7. Responsif dan optimasi: Pastikan frontpage Anda responsif, artinya tampil dengan baik di berbagai perangkat seperti desktop, tablet, dan ponsel. Periksa tampilan halaman di berbagai browser untuk memastikan konsistensi. Selain itu, pastikan frontpage Anda dioptimalkan untuk kecepatan dengan mengompres gambar dan menggunakan kode yang efisien.
+
+8. Uji dan perbaikan: Setelah selesai membuat frontpage, uji situs web Anda di berbagai perangkat dan periksa kembali apakah semua elemen berfungsi dengan baik. Terima umpan balik dari pengguna atau orang lain untuk memperbaiki dan menyempurnakan frontpage Anda.
+
+<br>
+
+## Desain Front Page
+
+![Desain Front Page](assets/frontpage/frontpage_wireframe.png){width="70%" style="text-align:center;"}
+
+<br>
+Dalam modul Junior Web Developer ini hanya membuat front page sederhana yaitu mengenai To Do List, dimana tahapan yang dilakukan adalah membuat desain, menentukan tata letak, dan bagian-bagian didalamnya. Dari desain tata letak di atas terdapat beberapa komponen yang digunakan, yaitu Header, Form, Table, dan Button. Untuk pembuatan tampilan atau UI menggunakan framework Bootstrap.
+<br>
+
+## Membuat Front Page
+
+### Membuat Folder dan File Projek
+
+Pada pembiatan frontpage ini karena belum berhubungan dengan database, dapat membuat folder atau file projek diluar folder xampp dan kita bisa membuat file dalam format html. 
+
+### Memulai HTML
+
+Pada pengenalan tools telah dijelaskan mengenai [instalasi bootstrap](2_pengenalan_tools.html#bootstrap). Telah diketahui komponen-komponen yang digunakan, yaitu Header, Form, Table, dan Button yang dapat langsung dicari kelas-kelasnya di dokumentasi bootstrap.
+<br>
+
+Memulai dengan kode html5 serta menambahkan tag meta dengan name="viewport" untuk membuat web yang responsif, selain itu juga melakukan instalasi css hingga javascript.
+<br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+
+    <!-- Bootstrap offline sesuai lokasi file disimpan -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css"> 
+
+    <!-- Bootstrap Online -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">   <!-- Gunakan salah satu cara saja -->
+    
+    <title>To Do List</title>   <!--Judul Halaman-->
+</head>
+<body>
+
+    <!-- Load js secara offline sesuai lokasi file disimpan -->
+    <script src="js/bootstrap.bundle.js"></script> 
+    <!-- Load JS online -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>   
+    <!-- cukup gunakan salah satu saja -->
+</body>
+</html>
+```
+Pada vscode ketika menuliskan html maka akan muncul pilihan template html yang akan digunakan, pada kode diatas menggunakan html5. Seperti yang telah dipelajari sebelumnya mengenai framework bootstrap, perlu memuat file bootstrap. Jika dalam menjalankan program selalu terhubung dengan internet dapat memuat css maupun js bootstrap dapat diakses pada halaman dokumentasi bootstrap bagian introduction. Namun jika dalam keadaan jarang terhubung internet maka dapat mengunduh terlebih dahulu file bootstrap lalu dapat meng-*export*-nya dan membuat folder assets pada lokasi folder projek untuk menyimpan file paket dari bootstrap.
+<br>
+
+Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan button. Untuk menggunakan framework pada komponen tersebut dapat melihat pada halaman docs bootstrap untuk melihat dokumentasi dari penggunaan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan.
+<br>
+
+```html
+<div class="container mt-3">
+...
+</div>
+```
+
+<br>
+Pada tampilan web kita ingin memusatkan dan mengelompokkan konten utama, maka digunakan container selain itu agar terdapat jarak antara konten dan tepi atas browser ditambahkan class "mt-3".
+<br>
+
+### **Judul (heading)**
+
+![Heading](assets/frontpage/heading.png){style="text-align:center;" .border}
+
+```html
+<h3>
+    To Do List
+    <small class="text-muted">
+        Catat semua hal yang akan kamu kerjakan disini.
+    </small>
+</h3>
+<hr>    
+```
+<br>
+
+Menampilkan judul dapat menggunakan heading 1 hingga 6 atau dengan tag `<p>` yang diberikan class "h1" - "h6". Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. 
+<br>
+
+Pada judul menampilkan kalimat **"To Do List"** sebagai kalimat utama dan **"Catat semua hal yang akan kamu kerjakan"** sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan class text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memiliki tingkat kepentingan lebih rendah.
+
+<br>
+
+### **Form**
+
+![Form](assets/frontpage/form.png){style="text-align:center;" .border}
+
+```html
+ <!-- Form -->
+
+<form class="form row" method="POST" action="" name="myForm"">
+    <div class="col mb-2">
+        <label for="inputIsi" class="form-label fw-bold">
+        Kegiatan
+        </label>
+        <input type="text" class="form-control" name="isi" id="inputIsi" placeholder="Kegiatan">
+    </div>
+    <div class="col mb-2">
+        <label for="inputTanggalAwal" class="form-label fw-bold">
+        Tanggal Awal
+        </label>
+        <input type="date" class="form-control" name="tgl_awal" id="inputTanggalAwal" placeholder="Tanggal Awal">
+    </div>
+        <div class="col mb-2">
+        <label for="inputTanggalAkhir" class="form-label fw-bold">
+        Tanggal Akhir
+        </label>
+        <input type="date" class="form-control" name="tgl_akhir" id="inputTanggalAkhir" placeholder="Tanggal Akhir">
+    </div>
+    <div class="col mb-2 d-flex">
+    <button type="submit" class="btn btn-primary rounded-pill px-3 mt-auto" 
+    name="simpan">Simpan</button>
+    </div>
+</form>
+
+```
+<br>
+
+Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang diatur dengan auto increment sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris atau secara inline dapat menggunakan grid, yaitu dengan kelas "row" pada form dan "col" pada pembungkus div dari form hingga button. Pastikan for pada label dan id pada input sama agar ketika label diklik akan membuat form input itu aktif. Pada form input akan menampilkan placeholder keterangan sesuai inputan form. 
+<br>
+
+Selain form juga terdapat button yang  bertipe submit dengan kelas dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience. Selain itu pada div pembungkus button diberikan class d-flex agar div dari button bersifat flexible sehingga posisi button dapat diatur.
+
+<br>
+
+### **Tabel**
+
+![Table](assets/frontpage/table.png) {style="text-align: center;"}
+
+```html
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">Awal</th>
+            <th scope="col">Akhir</th>
+            <th scope="col">Status</th>
+            <th scope="col">Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <td>Meeting dengan Unit Keuangan</td>
+            <td>2023-05-10</td>
+            <td>2023-05-11</td>
+            <td>
+                <a class="btn btn-warning rounded-pill px-3" type="button" 
+                href="#">Belum</a>
+            </td>
+            <td>
+                <a class="btn btn-info rounded-pill px-3" href="#">Ubah</a>
+                <a class="btn btn-danger rounded-pill px-3" href="#">Hapus</a>
+            </td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>Sepedaan</td>
+            <td>2023-05-23</td>
+            <td>2023-05-24</td>
+            <td>
+                <a class="btn btn-success rounded-pill px-3" type="button" 
+                href="#">Sudah</a>
+            </td>
+            <td>
+                <a class="btn btn-info rounded-pill px-3" href="#">Ubah</a>
+                <a class="btn btn-danger rounded-pill px-3" href="#">Hapus</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+<br>
+Kelas tabel yang digunakan adalah "table table-hover" dimana ketika pointer berada diatas tabel maka baris data akan di *highlight*.
+
+<br>
+
+:::{.callout-tip}
+
+Setiap penulisan suati kode jangan lupa untuk menambahkan komentar. Komentar berfungsi untuk memberikan keterangan pada script atau baris kode. Memberikan penjelasan apabila akan dilakukan perubahan oleh programmer lain. Selain itu juga mengingatkan kembali alur atau penjelasan dari script bagi programmer itu sendiri.
+
+:::
+
